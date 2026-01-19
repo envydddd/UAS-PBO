@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projek.controller">
+   <children>
+      <HBox alignment="CENTER" layoutX="47.0" layoutY="24.0" prefHeight="79.0" prefWidth="525.0" style="-fx-background-color: #bfb99f; -fx-background-radius: 15;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="79.0" prefWidth="157.0">
+               <children>
+                  <Label prefHeight="54.0" prefWidth="135.0" text="Konversi Mata Uang">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TabPane layoutX="47.0" layoutY="121.0" prefHeight="395.0" prefWidth="525.0" style="-fx-background-color: #e3e2dc;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Konversi Dollar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="525.0" style="-fx-background-color: #e3e2dc;">
+                     <children>
+                        <TextField fx:id="dollarField" layoutX="139.0" layoutY="56.0" />
+                        <Label layoutX="58.0" layoutY="60.0" prefHeight="17.0" prefWidth="81.0" text="Jumlah Dollar : " />
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="142.0" text="Konversi Dollar Ke Rupiah" AnchorPane.bottomAnchor="324.6666666666667" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="369.33333333333337" AnchorPane.topAnchor="14.0" />
+                        <HBox alignment="CENTER_LEFT" layoutX="58.0" layoutY="98.0" prefHeight="31.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="47.0" text="Hasil = " />
+                              <Label fx:id="dollarResult" text="Rp. 0" />
+                           </children>
+                        </HBox>
+                        <ListView fx:id="dollarHistory" layoutX="54.0" layoutY="186.0" prefHeight="143.0" prefWidth="418.0" AnchorPane.bottomAnchor="36.66666666666666" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="53.33333333333337" AnchorPane.topAnchor="186.0" />
+                        <Label layoutX="57.0" layoutY="167.0" prefHeight="17.0" prefWidth="55.0" text="History : " AnchorPane.bottomAnchor="181.33333333333331" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="412.66666666666674" AnchorPane.topAnchor="167.0" />
+                        <Button fx:id="btnDollar" layoutX="305.0" layoutY="56.0" mnemonicParsing="false" onAction="#convertDollar" text="Konfirmasi" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Konversi Yen">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="525.0" style="-fx-background-color: #e3e2dc;">
+                     <children>
+                        <TextField fx:id="yenField" layoutX="139.0" layoutY="56.0" />
+                        <Label layoutX="58.0" layoutY="60.0" prefHeight="17.0" prefWidth="81.0" text="Jumlah Yen : " />
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="142.0" text="Konversi Yen Ke Rupiah" AnchorPane.bottomAnchor="324.6666666666667" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <HBox alignment="CENTER_LEFT" layoutX="58.0" layoutY="98.0" prefHeight="31.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="47.0" text="Hasil = " />
+                              <Label fx:id="yenResult" text="Rp. 0" />
+                           </children>
+                        </HBox>
+                        <ListView fx:id="yenHistory" layoutX="54.0" layoutY="186.0" prefHeight="143.0" prefWidth="418.0" AnchorPane.bottomAnchor="36.66666666666666" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="186.0" />
+                        <Label layoutX="57.0" layoutY="167.0" prefHeight="17.0" prefWidth="55.0" text="History : " AnchorPane.bottomAnchor="181.33333333333331" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="412.66666666666674" AnchorPane.topAnchor="167.0" />
+                        <Button layoutX="309.0" layoutY="56.0" mnemonicParsing="false" onAction="#convertYen" text="Konfirmasi" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Penarikan">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e3e2dc;">
+                     <children>
+                        <Label layoutX="26.0" layoutY="31.0" prefHeight="17.0" prefWidth="101.0" text="Penarikan Uang" AnchorPane.bottomAnchor="324.6666666666667" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <Label layoutX="37.0" layoutY="86.0" text="Jumlah Penarikan : " />
+                        <TextField fx:id="penarikanField" layoutX="141.0" layoutY="82.0" promptText="Masukan Jumlah" />
+                        <Button fx:id="btnPenarikan" layoutX="307.0" layoutY="82.0" mnemonicParsing="false" onAction="#tarikUang" text="Konfirmasi" />
+                        <Label layoutX="37.0" layoutY="167.0" prefHeight="17.0" prefWidth="55.0" text="History : " AnchorPane.bottomAnchor="181.33333333333331" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="412.66666666666674" AnchorPane.topAnchor="167.0" />
+                        <ListView fx:id="penarikanHistory" layoutX="54.0" layoutY="195.0" prefHeight="143.0" prefWidth="418.0" AnchorPane.bottomAnchor="36.66666666666666" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="186.0" />
+                        <HBox alignment="CENTER_LEFT" layoutX="37.0" layoutY="41.0" prefHeight="38.0" prefWidth="200.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="69.0" text="Total Saldo : " />
+                              <Label fx:id="saldoLabel" prefHeight="17.0" prefWidth="95.0" text="Rp 1,000,000" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="163.0" layoutY="107.0" prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Status : " />
+                              <Label fx:id="penarikanStatus" text="-" />
+                           </children>
+                        </HBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Pengecekan Sistem">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e3e2dc;">
+                     <children>
+                        <Label layoutX="44.0" layoutY="26.0" text="Informasi Runtime" AnchorPane.bottomAnchor="324.6666666666667" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <Button fx:id="btnRuntime" layoutX="221.0" layoutY="50.0" mnemonicParsing="false" onAction="#checkRuntime" text="Cek Runtime" />
+                        <VBox layoutX="45.0" layoutY="93.0" prefHeight="195.0" prefWidth="436.0">
+                           <children>
+                              <Label text="Informasi memori JVM" />
+                              <TextArea fx:id="memoryInfo" prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="47.0" layoutY="303.0" prefHeight="54.0" prefWidth="435.0">
+                           <children>
+                              <Label text="Waktu Eksekusi : " />
+                              <Label fx:id="runtimeInfo" text="-" />
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Update Kurs">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="23.0" text="Update Kurs Mata Uang" AnchorPane.bottomAnchor="324.6666666666667" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <Button layoutX="192.0" layoutY="77.0" mnemonicParsing="false" onAction="#updateKursDollar" text="Button" />
+                        <Button layoutX="192.0" layoutY="183.0" mnemonicParsing="false" onAction="#updateKursYen" text="Button" />
+                        <TextField fx:id="kursDollarField" layoutX="23.0" layoutY="77.0" />
+                        <TextField fx:id="kursYenField" layoutX="23.0" layoutY="183.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Accordion />
+   </children>
+</AnchorPane>
