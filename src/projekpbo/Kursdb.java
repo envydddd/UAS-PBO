@@ -1,5 +1,7 @@
 package projekpbo;
 
+import java.sql.*;
+
 public class Kursdb {
     public static double getKurs(String mataUang) {
         String sql = "SELECT nilai FROM kurs WHERE mata_uang = ?";
@@ -27,3 +29,4 @@ public class Kursdb {
     }
 
 }
+
