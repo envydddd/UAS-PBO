@@ -1,7 +1,5 @@
 package projekpbo;
 
-import Projek.*;
-
 public class enkapsulasinyoba {
 
     protected double jumlah;
@@ -22,4 +20,5 @@ public class enkapsulasinyoba {
     public double konversi(){
         return 0;
     }
+
 }
