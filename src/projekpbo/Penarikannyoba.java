@@ -1,7 +1,5 @@
 package projekpbo;
 
-import Projek.*;
-
 public class Penarikannyoba {
     private double saldo;
     private double jumlah;
@@ -25,4 +23,5 @@ public class Penarikannyoba {
     public double getsaldo() {
         return saldo;
     }
+
 }
