@@ -1,7 +1,5 @@
 package projekpbo;
 
-import Projek.*;
-
 class konveryen {
     private double jumlah;
     
@@ -13,4 +11,5 @@ class konveryen {
         double kurs = Kursdb.getKurs("JPY");
         return jumlah * kurs;
     }
+
 }
